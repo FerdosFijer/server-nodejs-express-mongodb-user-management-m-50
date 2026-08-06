@@ -39,6 +39,7 @@ const run = async () => {
     })
     app.post('/users', async (req,res)=>{
       const newUser = req.body;
+      console.log('user to be inserted here', newUser);
       const result = await userCollection.insertOne(newUser);
       res.send(result)
     })
